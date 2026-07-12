@@ -3,319 +3,452 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MediNest — All Your Family's Medical Records, In One Nest</title>
-<meta name="description" content="MediNest is the secure family health vault for medical documents, prescriptions, and medication reminders — for every member of your family, in one calm place." />
+<title>MediNest — Family Medical Records &amp; Prescription Tracker App</title>
+<meta name="description" content="MediNest is the family medical records app that scans and organizes prescriptions, insurance cards, and health documents for every family member. Free to start." />
+<meta name="keywords" content="prescription tracker, family medical records, medical document scanner, family health app, medical records app, insurance card wallet, personal health record, medication tracker" />
+<meta name="author" content="Deep Saha" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://medinest.dsahathemes.in/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="MediNest" />
+<meta property="og:title" content="MediNest — Family Medical Records & Prescription Tracker App" />
+<meta property="og:description" content="Scan once — MediNest files prescriptions, insurance cards, and health records by family member, automatically. Free to start." />
+<meta property="og:url" content="https://medinest.dsahathemes.in/" />
+<meta property="og:image" content="https://medinest.dsahathemes.in/assets/medinest-1.jpg" />
+<meta property="og:image:width" content="1260" />
+<meta property="og:image:height" content="2736" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MediNest — Family Medical Records & Prescription Tracker App" />
+<meta name="twitter:description" content="Scan once — MediNest files prescriptions, insurance cards, and health records by family member, automatically." />
+<meta name="twitter:image" content="https://medinest.dsahathemes.in/assets/medinest-1.jpg" />
+
+<meta name="theme-color" content="#163832" />
+<link rel="icon" href="assets/logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          sage:      '#6FA582',
-          sageDeep:  '#4E8367',
-          sageDark:  '#2F4A3B',
-          sageLight: '#E4EFE7',
-          sageTint:  '#F4F9F5',
-        },
+    theme: { extend: {
+      colors: {
+        ink:'#051F20', inkDeep:'#0B2B26', hero:'#163832',
+        primary:'#235347', primaryLight:'#E4F0EA', moss:'#8EB69B',
+        background:'#F5FBF6', mint:'#DAF1DE', accent:'#D9A441',
+        text:'#12211D', textSecondary:'#5B6E67', border:'#DCE9E1', success:'#5E9C7C',
       },
-    },
+      fontFamily: { display:['Fraunces','serif'], body:['Plus Jakarta Sans','sans-serif'] },
+    }},
   };
 </script>
 <style>
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:#F5FBF6; color:#12211D; overflow-x: hidden; }
+  .font-display { font-family:'Fraunces',serif; }
   details[open] summary .chev { transform: rotate(180deg); }
   .chev { transition: transform .2s ease; }
   .icon { width: 1.5rem; height: 1.5rem; stroke-width: 1.75; }
+  .glass-nav { background:rgba(245,251,246,0.8); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(220,233,225,0.6); }
+  .shot-scroll { scroll-snap-type: x mandatory; }
+  .shot-scroll > * { scroll-snap-align: start; }
+  .shot-scroll::-webkit-scrollbar { height: 6px; }
+  .shot-scroll::-webkit-scrollbar-thumb { background: #DAF1DE; border-radius: 999px; }
 </style>
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MediNest",
+  "url": "https://medinest.dsahathemes.in/",
+  "logo": "https://medinest.dsahathemes.in/assets/logo.png",
+  "founder": { "@type": "Person", "name": "Deep Saha" },
+  "email": "sahadeep125@gmail.com"
+}
+</script>
+<!-- JSON-LD: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "MediNest",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "MedicalApplication",
+  "description": "MediNest is a family medical records and prescription tracker that helps you scan, organize, and access every family member's health documents, insurance cards, vaccination records, and medication schedules in one place.",
+  "url": "https://medinest.dsahathemes.in/",
+  "image": "https://medinest.dsahathemes.in/assets/logo.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free to start, 7-day free trial of MediNest Plus"
+  },
+  "publisher": { "@type": "Organization", "name": "MediNest" }
+}
+</script>
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is MediNest and who is it for?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MediNest is a family medical records app that lets you scan, store, and organize prescriptions, insurance cards, lab reports, and vaccination records for every member of your family in one secure vault. It's built for parents, caregivers, and anyone managing health paperwork for more than one person." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my family's health data secure in MediNest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MediNest stores your documents and health data on your device, protected by your device's built-in security and encryption. Nothing is sold or shared with third parties without your say-so." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can MediNest scan and organize prescriptions automatically?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Snap a photo of any prescription, insurance card, or medical document and MediNest automatically files it under the right family member and category, so you can find it in seconds later." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many family members can I add to MediNest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can add every member of your household — kids, yourself, a partner, or aging parents — and switch between their records, medications, and documents in a single tap." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MediNest track medication reminders?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MediNest sends dosage, schedule, and refill reminders for every prescription, for every family member, so nobody misses a dose." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I access emergency medical information quickly in MediNest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MediNest generates a shareable Emergency Card for each family member with blood group, allergies, chronic conditions, and emergency contacts, viewable via QR code and exportable as a PDF, even offline." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is MediNest free to use?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, MediNest is free to start with no credit card required. MediNest Plus, which unlocks unlimited family members and extra storage, is available with a 7-day free trial." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I store insurance cards in MediNest?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. MediNest keeps a digital insurance card wallet organized by family member, so every policy and ID card is on your phone instead of in a drawer at home." }
+    }
+  ]
+}
+</script>
 </head>
-<body class="bg-sageTint text-sageDark font-sans antialiased">
+<body class="antialiased">
 
 <!-- Reusable SVG icon symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="i-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-      <path d="M12 9v6M9 12h6"/>
-    </symbol>
-    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
-    <symbol id="i-books" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
-    <symbol id="i-vault" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 12h.01"/><circle cx="14" cy="12" r="3"/></symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
-    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
-    <symbol id="i-stethoscope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
-    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></symbol>
-    <symbol id="i-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5a5 5 0 0 1-7.07-7.07l7.07-7.07a5 5 0 1 1 7.07 7.07z"/><path d="m8.5 8.5 7 7"/></symbol>
-    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></symbol>
-    <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4M17 3l4 4-3 3-8 8-4 1 1-4 8-8z"/><path d="m9 12 3 3M7 14l3 3"/></symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-books" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-vault" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M11 12h.01"/><circle cx="14" cy="12" r="3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0"/><rect x="3" y="10" width="18" height="10" rx="2"/><path d="M12 13v4M10 15h4"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/></symbol>
+    <symbol id="i-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20.5a5 5 0 0 1-7.07-7.07l7.07-7.07a5 5 0 1 1 7.07 7.07z"/><path d="m8.5 8.5 7 7"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+    <symbol id="i-syringe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4M17 3l4 4-3 3-8 8-4 1 1-4 8-8z"/><path d="m9 12 3 3M7 14l3 3"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
     <symbol id="i-apple" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.4.4-.6.9-.6 1.6v16.2c0 .7.2 1.2.6 1.6l9.2-9.7L3.6 2.3zm10.6 8.8L16.9 8l-11-6.3c-.4-.2-.8-.2-1.2 0l9.5 9.4zm4.5 2.5l2.6-1.5c.8-.5.8-1.7 0-2.2l-2.6-1.5-3 3 3 2.2zm-4.5 0L4.7 22.5c.4.1.8.1 1.2-.1L16.9 16l-2.7-2.4z"/></symbol>
-    <symbol id="i-twitter" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.4.7.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7C8.4 8.8 5.1 7 2.9 4.4c-.4.7-.6 1.5-.6 2.3 0 1.4.7 2.7 1.8 3.4-.7 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.7 2.1 2.9 3.9 2.9-1.4 1.1-3.2 1.8-5.1 1.8H2c1.8 1.2 4 1.9 6.3 1.9 7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
-    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.3-2 2-2h2V2h-3c-3 0-5 1.8-5 5v3H6v4h3v8h4z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
   </defs>
 </svg>
 
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg focus:z-[100]">Skip to content</a>
+
 <!-- Sticky Nav -->
-<header class="sticky top-0 z-50 bg-sageTint/85 backdrop-blur border-b border-sage/40">
-  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
-    <a href="#" class="flex items-center gap-2 font-bold text-xl text-sageDark">
-      <span class="grid place-items-center w-10 h-10 rounded-2xl bg-sageDeep text-white shadow-sm">
-        <svg class="w-5 h-5"><use href="#i-logo"/></svg>
-      </span>
+<header class="sticky top-0 z-50 glass-nav">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-3.5">
+    <a href="/" class="flex items-center gap-2.5 font-display font-semibold text-xl text-ink">
+      <img src="assets/logo.png" alt="MediNest logo" width="40" height="40" class="w-9 h-9 rounded-xl" />
       MediNest
     </a>
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="#features" class="hover:text-sageDeep transition">Features</a>
-      <a href="#how" class="hover:text-sageDeep transition">How it Works</a>
-      <a href="#faq" class="hover:text-sageDeep transition">FAQ</a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-text">
+      <a href="#features" class="hover:text-primary transition">Features</a>
+      <a href="#how" class="hover:text-primary transition">How it Works</a>
+      <a href="guides/index.html" class="hover:text-primary transition">Guides</a>
+      <a href="#faq" class="hover:text-primary transition">FAQ</a>
     </div>
     <div class="flex items-center gap-3">
-      <a href="#download" class="hidden sm:inline-flex bg-sageDeep hover:bg-sageDark text-white text-sm font-semibold px-4 py-2.5 rounded-2xl shadow-sm transition">Download App</a>
-      <button id="menuBtn" aria-label="Menu" class="md:hidden p-2 rounded-xl hover:bg-sage/20">
+      <a href="#download" class="hidden sm:inline-flex bg-primary hover:bg-inkDeep text-white text-sm font-semibold px-4 py-2.5 rounded-2xl shadow-sm transition">Get Notified</a>
+      <button id="menuBtn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden p-2 rounded-xl hover:bg-mint/60">
         <svg class="w-6 h-6"><use href="#i-menu"/></svg>
       </button>
     </div>
   </nav>
-  <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-2 text-sm font-medium bg-sageTint border-t border-sage/30">
+  <div id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-2 text-sm font-medium bg-background border-t border-border">
     <a href="#features" class="block py-2">Features</a>
     <a href="#how" class="block py-2">How it Works</a>
+    <a href="guides/index.html" class="block py-2">Guides</a>
     <a href="#faq" class="block py-2">FAQ</a>
-    <a href="#download" class="block mt-2 text-center bg-sageDeep text-white py-2.5 rounded-2xl">Download App</a>
+    <a href="#download" class="block mt-2 text-center bg-primary text-white py-2.5 rounded-2xl">Get Notified</a>
   </div>
 </header>
 
+<main id="main">
 <!-- Hero -->
-<section class="max-w-6xl mx-auto px-5 pt-14 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+<section class="max-w-6xl mx-auto px-5 pt-14 pb-16 md:pt-20 md:pb-24 grid md:grid-cols-2 gap-12 items-center">
   <div>
-    <span class="inline-flex items-center gap-2 bg-white text-sageDeep text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm ring-1 ring-sage/30">
-      <span class="w-2 h-2 rounded-full bg-sageDeep"></span> Trusted by 20,000+ families
+    <span class="inline-flex items-center gap-2 bg-white text-primary text-xs font-semibold px-3 py-1.5 rounded-full shadow-sm ring-1 ring-border">
+      <span class="w-2 h-2 rounded-full bg-accent"></span> Launching soon &middot; Join the waitlist
     </span>
-    <h1 class="mt-5 text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] text-sageDark tracking-tight">
-      All Your Family's Medical Records, <span class="text-sageDeep">In One Nest.</span>
+    <h1 class="mt-5 text-4xl sm:text-5xl md:text-[3.4rem] font-display font-semibold leading-[1.08] text-ink tracking-tight">
+      One family medical records app for every prescription, record &amp; insurance card.
     </h1>
-    <p class="mt-6 text-lg text-sageDark/80 max-w-xl leading-relaxed">
-      Store documents, prescriptions, and medication reminders for every family member — safely and simply. From your little one's vaccination card to grandma's blood work, MediNest keeps it all together.
+    <p class="mt-6 text-lg text-textSecondary max-w-xl leading-relaxed">
+      Stop digging through drawers for prescriptions, insurance cards, and vaccination records. Snap a photo and MediNest — the family medical records app &amp; prescription tracker — files it by family member, automatically.
     </p>
     <div class="mt-8 flex flex-wrap gap-4 items-center">
-      <a href="#download" class="bg-sageDeep hover:bg-sageDark text-white font-semibold px-6 py-3.5 rounded-2xl shadow-md transition">Get Started Free</a>
+      <a href="#download" class="bg-primary hover:bg-inkDeep text-white font-semibold px-6 py-3.5 rounded-2xl shadow-md transition">Get Started Free</a>
       <div class="flex gap-3">
-        <a href="#" class="flex items-center gap-2 bg-white text-sageDark px-4 py-3 rounded-2xl shadow-sm ring-1 ring-sage/30 hover:shadow-md transition">
+        <a href="#download" class="flex items-center gap-2 bg-white text-text px-4 py-3 rounded-2xl shadow-sm ring-1 ring-border hover:shadow-md transition">
           <svg class="w-6 h-6"><use href="#i-apple"/></svg>
           <div class="text-left leading-tight">
-            <div class="text-[10px] uppercase tracking-wide">Download on the</div>
+            <div class="text-[10px] uppercase tracking-wide text-textSecondary">Coming soon to the</div>
             <div class="font-semibold text-sm">App Store</div>
           </div>
         </a>
-        <a href="#" class="flex items-center gap-2 bg-white text-sageDark px-4 py-3 rounded-2xl shadow-sm ring-1 ring-sage/30 hover:shadow-md transition">
+        <a href="#download" class="flex items-center gap-2 bg-white text-text px-4 py-3 rounded-2xl shadow-sm ring-1 ring-border hover:shadow-md transition">
           <svg class="w-6 h-6"><use href="#i-play"/></svg>
           <div class="text-left leading-tight">
-            <div class="text-[10px] uppercase tracking-wide">Get it on</div>
+            <div class="text-[10px] uppercase tracking-wide text-textSecondary">Coming soon on</div>
             <div class="font-semibold text-sm">Google Play</div>
           </div>
         </a>
       </div>
     </div>
-    <p class="mt-6 text-sm text-sageDark/60">Free forever plan • No credit card required • End-to-end encrypted</p>
+    <p class="mt-6 text-sm text-textSecondary flex flex-wrap gap-x-5 gap-y-2">
+      <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-success"><use href="#i-check"/></svg>Free to start</span>
+      <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-success"><use href="#i-check"/></svg>No credit card required</span>
+      <span class="inline-flex items-center gap-1.5"><svg class="w-4 h-4 text-success"><use href="#i-check"/></svg>Private by design</span>
+    </p>
   </div>
 
-  <!-- Phone Mockup -->
   <div class="relative flex justify-center">
-    <div class="absolute inset-0 bg-sage/40 blur-3xl rounded-full"></div>
-    <div class="relative w-[280px] h-[560px] bg-sageDark rounded-[3rem] p-3 shadow-2xl">
-      <div class="w-full h-full bg-white rounded-[2.4rem] overflow-hidden relative">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-sageDark rounded-b-2xl"></div>
-        <div class="p-5 pt-10">
-          <div class="flex items-center justify-between">
-            <div>
-              <div class="text-xs text-sageDark/50">Good morning,</div>
-              <div class="font-bold text-sageDark">The Patel Family</div>
-            </div>
-            <div class="w-10 h-10 rounded-full bg-sageDeep grid place-items-center text-white font-bold">P</div>
-          </div>
-          <div class="mt-5 bg-sageLight rounded-2xl p-4">
-            <div class="flex items-center gap-2 text-xs font-semibold text-sageDeep">
-              <svg class="w-4 h-4"><use href="#i-pill"/></svg> Next reminder
-            </div>
-            <div class="mt-1 font-semibold text-sageDark">Anaya — Vitamin D</div>
-            <div class="text-xs text-sageDark/60">Today, 8:00 PM</div>
-          </div>
-          <div class="mt-4 grid grid-cols-2 gap-3">
-            <div class="bg-white border border-sage/40 rounded-2xl p-3">
-              <div class="w-8 h-8 rounded-xl bg-sage/30 grid place-items-center text-sageDeep"><svg class="w-4 h-4"><use href="#i-file"/></svg></div>
-              <div class="mt-2 text-xs font-semibold text-sageDark">Prescriptions</div>
-              <div class="text-[10px] text-sageDark/50">24 files</div>
-            </div>
-            <div class="bg-white border border-sage/40 rounded-2xl p-3">
-              <div class="w-8 h-8 rounded-xl bg-sage/30 grid place-items-center text-sageDeep"><svg class="w-4 h-4"><use href="#i-stethoscope"/></svg></div>
-              <div class="mt-2 text-xs font-semibold text-sageDark">Reports</div>
-              <div class="text-[10px] text-sageDark/50">12 files</div>
-            </div>
-            <div class="bg-white border border-sage/40 rounded-2xl p-3">
-              <div class="w-8 h-8 rounded-xl bg-sage/30 grid place-items-center text-sageDeep"><svg class="w-4 h-4"><use href="#i-syringe"/></svg></div>
-              <div class="mt-2 text-xs font-semibold text-sageDark">Vaccines</div>
-              <div class="text-[10px] text-sageDark/50">Up to date</div>
-            </div>
-            <div class="bg-white border border-sage/40 rounded-2xl p-3">
-              <div class="w-8 h-8 rounded-xl bg-sage/30 grid place-items-center text-sageDeep"><svg class="w-4 h-4"><use href="#i-users"/></svg></div>
-              <div class="mt-2 text-xs font-semibold text-sageDark">Family</div>
-              <div class="text-[10px] text-sageDark/50">4 members</div>
-            </div>
-          </div>
-          <div class="mt-4 bg-sageDeep rounded-2xl p-3 text-white">
-            <div class="text-xs opacity-70">Upcoming</div>
-            <div class="text-sm font-semibold">Dr. Mehta — Tuesday 10am</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="absolute inset-0 bg-moss/30 blur-3xl rounded-full"></div>
+    <img src="assets/medinest-1.jpg" alt="MediNest app home screen showing one shared vault for a whole family, with quick upload, insurance policies, prescriptions, and lab reports organized by family member" width="320" height="695" class="relative w-[280px] sm:w-[320px] rounded-[2.5rem] shadow-2xl ring-1 ring-black/5" loading="eager" fetchpriority="high" />
   </div>
 </section>
 
 <!-- Problem strip -->
 <section class="bg-white py-14">
   <div class="max-w-6xl mx-auto px-5">
-    <p class="text-center text-sm font-semibold uppercase tracking-wider text-sageDeep">The everyday chaos</p>
-    <h2 class="text-center text-2xl md:text-3xl font-bold text-sageDark mt-2">Sound familiar?</h2>
+    <p class="text-center text-sm font-semibold uppercase tracking-wider text-primary">The everyday chaos</p>
+    <h2 class="text-center text-2xl md:text-3xl font-display font-semibold text-ink mt-2">Sound familiar?</h2>
     <div class="mt-10 grid md:grid-cols-3 gap-6">
-      <div class="bg-sageTint rounded-2xl p-6 ring-1 ring-sage/30">
-        <div class="w-12 h-12 rounded-2xl bg-sageDeep text-white grid place-items-center"><svg class="icon"><use href="#i-folder"/></svg></div>
-        <h3 class="mt-4 font-semibold text-sageDark">Lost prescriptions</h3>
-        <p class="mt-2 text-sm text-sageDark/70">That crumpled paper from the pediatrician? Gone before dinner.</p>
+      <div class="bg-background rounded-2xl p-6 ring-1 ring-border">
+        <div class="w-12 h-12 rounded-2xl bg-primary text-white grid place-items-center"><svg class="icon"><use href="#i-folder"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Lost prescriptions</h3>
+        <p class="mt-2 text-sm text-textSecondary">That crumpled paper from the pediatrician? Gone before dinner.</p>
       </div>
-      <div class="bg-sageTint rounded-2xl p-6 ring-1 ring-sage/30">
-        <div class="w-12 h-12 rounded-2xl bg-sageDeep text-white grid place-items-center"><svg class="icon"><use href="#i-books"/></svg></div>
-        <h3 class="mt-4 font-semibold text-sageDark">Scattered reports</h3>
-        <p class="mt-2 text-sm text-sageDark/70">Blood tests in email, X-rays in WhatsApp, receipts in a drawer.</p>
+      <div class="bg-background rounded-2xl p-6 ring-1 ring-border">
+        <div class="w-12 h-12 rounded-2xl bg-primary text-white grid place-items-center"><svg class="icon"><use href="#i-books"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Scattered reports</h3>
+        <p class="mt-2 text-sm text-textSecondary">Blood tests in email, X-rays in WhatsApp, insurance cards in a drawer.</p>
       </div>
-      <div class="bg-sageTint rounded-2xl p-6 ring-1 ring-sage/30">
-        <div class="w-12 h-12 rounded-2xl bg-sageDeep text-white grid place-items-center"><svg class="icon"><use href="#i-clock"/></svg></div>
-        <h3 class="mt-4 font-semibold text-sageDark">Forgotten meds</h3>
-        <p class="mt-2 text-sm text-sageDark/70">Did mom take her 8pm pill? Nobody's quite sure.</p>
+      <div class="bg-background rounded-2xl p-6 ring-1 ring-border">
+        <div class="w-12 h-12 rounded-2xl bg-primary text-white grid place-items-center"><svg class="icon"><use href="#i-clock"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Forgotten meds</h3>
+        <p class="mt-2 text-sm text-textSecondary">Did mom take her 8pm pill? Nobody's quite sure.</p>
       </div>
     </div>
-    <p class="mt-10 text-center text-sageDark/70 max-w-2xl mx-auto">MediNest gently puts everything — and everyone — back in one calm place.</p>
+    <p class="mt-10 text-center text-textSecondary max-w-2xl mx-auto">MediNest gently puts everything — and everyone — back in one calm place.</p>
   </div>
 </section>
 
 <!-- Features -->
 <section id="features" class="max-w-6xl mx-auto px-5 py-20">
   <div class="text-center max-w-2xl mx-auto">
-    <p class="text-sm font-semibold uppercase tracking-wider text-sageDeep">Features</p>
-    <h2 class="mt-2 text-3xl md:text-4xl font-bold text-sageDark">Everything your family's health needs</h2>
-    <p class="mt-4 text-sageDark/70">Thoughtfully designed for parents, caregivers, and anyone juggling more than one health story.</p>
+    <p class="text-sm font-semibold uppercase tracking-wider text-primary">Features</p>
+    <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">Everything your family's health paperwork needs</h2>
+    <p class="mt-4 text-textSecondary">Thoughtfully designed for parents, caregivers, and anyone juggling more than one health story.</p>
   </div>
 
   <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-vault"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Family Vault for Documents</h3>
-      <p class="mt-2 text-sm text-sageDark/70">Snap, upload, and organize prescriptions, reports, and receipts by member.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-scan"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Scan Once, Organize Everywhere</h3>
+      <p class="mt-2 text-sm text-textSecondary">MediNest's medical document scanner files prescriptions and paperwork automatically — no manual sorting.</p>
     </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-bell"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Medication Reminders</h3>
-      <p class="mt-2 text-sm text-sageDark/70">Gentle nudges for every dose, every family member — never miss again.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-users"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">One Vault, Every Family Member</h3>
+      <p class="mt-2 text-sm text-textSecondary">Switch between kids, yourself, or aging parents in a tap — a true family medical records app.</p>
     </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-users"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Multi-Member Profiles</h3>
-      <p class="mt-2 text-sm text-sageDark/70">Separate profiles for kids, parents, and grandparents — with tailored views.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-shield"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Insurance Card Wallet</h3>
+      <p class="mt-2 text-sm text-textSecondary">Insurance cards and emergency info on your phone, organized by family member — not in a drawer at home.</p>
     </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-shield"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Secure Cloud Backup</h3>
-      <p class="mt-2 text-sm text-sageDark/70">End-to-end encrypted storage. Only your family holds the key.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-bell"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Medication Reminders</h3>
+      <p class="mt-2 text-sm text-textSecondary">A built-in medication tracker with dosage, schedule, and refill reminders synced across the family's care.</p>
     </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-stethoscope"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Quick Doctor Visit Prep</h3>
-      <p class="mt-2 text-sm text-sageDark/70">Auto-generate a summary of history and meds before every appointment.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-syringe"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Vaccinations &amp; Conditions</h3>
+      <p class="mt-2 text-sm text-textSecondary">Vaccination, allergy, and condition history — ready before the appointment, not reconstructed in the waiting room.</p>
     </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20 hover:shadow-md hover:ring-sage/40 transition">
-      <div class="w-12 h-12 rounded-2xl bg-sageLight text-sageDeep grid place-items-center"><svg class="icon"><use href="#i-share"/></svg></div>
-      <h3 class="mt-4 font-semibold text-lg text-sageDark">Share Records Instantly</h3>
-      <p class="mt-2 text-sm text-sageDark/70">Send a secure link to any doctor or specialist in seconds.</p>
+    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-border hover:shadow-md transition">
+      <div class="w-12 h-12 rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-cross"/></svg></div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Emergency Medical Info</h3>
+      <p class="mt-2 text-sm text-textSecondary">A shareable emergency card with blood group, allergies, and contacts — viewable by QR code, even offline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section id="screenshots" class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary">See it in action</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">A look inside MediNest</h2>
+      <p class="mt-4 text-textSecondary">From the family dashboard to emergency cards — every screen designed to get paperwork out of your head.</p>
+    </div>
+  </div>
+  <div class="mt-12 shot-scroll flex gap-5 overflow-x-auto px-5 pb-4 max-w-full snap-x">
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-1.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest home dashboard: one vault for your whole family with quick upload and insurance policies" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Family dashboard</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-2.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest vault items screen: every record organized automatically, searchable and filterable by type and family member" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Search &amp; filter records</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-3.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest medication reminder screen: never miss a dose again with dosage, schedule, and refill reminders" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Medication reminders</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-4.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest emergency card screen: blood group, allergies, and contacts ready in one tap via QR code, even offline" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Emergency card</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-5.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest family member profile: vitals, allergies, chronic conditions, and vaccinations for one app for the whole family" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Family member profiles</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-6.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest insurance vault screen: insurance cards always in your pocket, organized by family member" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Insurance card wallet</p>
+    </div>
+    <div class="flex-shrink-0 w-[220px] sm:w-[260px]">
+      <img src="assets/medinest-7.jpg" width="260" height="565" loading="lazy" class="rounded-2xl shadow-md ring-1 ring-black/5 w-full" alt="MediNest family list screen: your whole family organized, with a 7-day free trial and health records for everyone" />
+      <p class="mt-3 text-sm font-medium text-ink text-center">Your whole family, organized</p>
     </div>
   </div>
 </section>
 
 <!-- How it works -->
-<section id="how" class="bg-white py-20">
+<section id="how" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="text-center max-w-2xl mx-auto">
+    <p class="text-sm font-semibold uppercase tracking-wider text-primary">How it works</p>
+    <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">Three steps to a paperless family health record</h2>
+  </div>
+  <ol class="mt-14 grid md:grid-cols-3 gap-8">
+    <li class="bg-white rounded-2xl p-8 text-center ring-1 ring-border shadow-sm">
+      <div class="w-12 h-12 mx-auto rounded-full bg-primary text-white font-semibold grid place-items-center text-lg">1</div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Snap a photo</h3>
+      <p class="mt-2 text-sm text-textSecondary">Snap any prescription, insurance card, or medical document with your phone's camera.</p>
+    </li>
+    <li class="bg-white rounded-2xl p-8 text-center ring-1 ring-border shadow-sm">
+      <div class="w-12 h-12 mx-auto rounded-full bg-primary text-white font-semibold grid place-items-center text-lg">2</div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">MediNest files it automatically</h3>
+      <p class="mt-2 text-sm text-textSecondary">It's sorted under the right family member and category — prescriptions, labs, insurance, vaccines.</p>
+    </li>
+    <li class="bg-white rounded-2xl p-8 text-center ring-1 ring-border shadow-sm">
+      <div class="w-12 h-12 mx-auto rounded-full bg-primary text-white font-semibold grid place-items-center text-lg">3</div>
+      <h3 class="mt-4 font-semibold text-lg text-ink">Pull it up in seconds</h3>
+      <p class="mt-2 text-sm text-textSecondary">Find any record, dose, or emergency card whenever you need it — at the pharmacy, at the appointment, anywhere.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- Trust strip (no fabricated stats — pre-launch, principles instead) -->
+<section class="bg-white py-16">
   <div class="max-w-6xl mx-auto px-5">
     <div class="text-center max-w-2xl mx-auto">
-      <p class="text-sm font-semibold uppercase tracking-wider text-sageDeep">How it works</p>
-      <h2 class="mt-2 text-3xl md:text-4xl font-bold text-sageDark">Three gentle steps to peace of mind</h2>
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary">Why families choose MediNest</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">Built for real caregiving chaos</h2>
     </div>
-    <div class="mt-14 grid md:grid-cols-3 gap-8">
-      <div class="bg-sageTint rounded-2xl p-8 text-center ring-1 ring-sage/30">
-        <div class="w-12 h-12 mx-auto rounded-full bg-sageDeep text-white font-bold grid place-items-center text-lg">1</div>
-        <h3 class="mt-4 font-semibold text-lg text-sageDark">Add Family Members</h3>
-        <p class="mt-2 text-sm text-sageDark/70">Create a profile for everyone — kids, partners, parents. Add photos and basic health info.</p>
+    <div class="mt-12 grid sm:grid-cols-3 gap-6">
+      <div class="text-center">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-lock"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Private by design</h3>
+        <p class="mt-2 text-sm text-textSecondary">Nothing is sold or shared without your say-so. Your family's health story stays yours.</p>
       </div>
-      <div class="bg-sageTint rounded-2xl p-8 text-center ring-1 ring-sage/30">
-        <div class="w-12 h-12 mx-auto rounded-full bg-sageDeep text-white font-bold grid place-items-center text-lg">2</div>
-        <h3 class="mt-4 font-semibold text-lg text-sageDark">Upload Documents & Meds</h3>
-        <p class="mt-2 text-sm text-sageDark/70">Snap prescriptions, drag in PDFs, and log medications with dosages.</p>
+      <div class="text-center">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-users"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Built with real families</h3>
+        <p class="mt-2 text-sm text-textSecondary">Designed with input from beta families managing multi-generation care — kids to grandparents.</p>
       </div>
-      <div class="bg-sageTint rounded-2xl p-8 text-center ring-1 ring-sage/30">
-        <div class="w-12 h-12 mx-auto rounded-full bg-sageDeep text-white font-bold grid place-items-center text-lg">3</div>
-        <h3 class="mt-4 font-semibold text-lg text-sageDark">Get Reminders & Access Anywhere</h3>
-        <p class="mt-2 text-sm text-sageDark/70">Receive dose reminders and pull up any record on any device — instantly.</p>
+      <div class="text-center">
+        <div class="w-12 h-12 mx-auto rounded-2xl bg-mint text-primary grid place-items-center"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h3 class="mt-4 font-semibold text-ink">Free to start</h3>
+        <p class="mt-2 text-sm text-textSecondary">Try MediNest Plus free for 7 days — no credit card required to get organized.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="max-w-6xl mx-auto px-5 py-20">
-  <div class="text-center">
-    <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm ring-1 ring-sage/30">
-      <span class="flex text-amber-500 gap-0.5">
-        <svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg>
-      </span>
-      <span class="text-sm font-semibold text-sageDark">4.9 average from 8,200+ reviews</span>
-    </div>
-    <h2 class="mt-6 text-3xl md:text-4xl font-bold text-sageDark">Loved by caregiving families</h2>
+<!-- Guides -->
+<section id="guides" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="text-center max-w-2xl mx-auto">
+    <p class="text-sm font-semibold uppercase tracking-wider text-primary">Guides</p>
+    <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">Guides for every kind of family caregiver</h2>
+    <p class="mt-4 text-textSecondary">Practical, specific answers to the questions families search for — with a walkthrough of how MediNest handles it.</p>
   </div>
-  <div class="mt-12 grid md:grid-cols-3 gap-6">
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20">
-      <div class="flex text-amber-500 gap-0.5"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-      <p class="mt-3 text-sageDark/80 text-sm leading-relaxed">"I used to have three folders and two shoeboxes. Now everything for my kids and my mom lives in MediNest. It's a lifesaver at appointments."</p>
-      <div class="mt-5 flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-sageDeep grid place-items-center font-bold text-white">R</div>
-        <div>
-          <div class="text-sm font-semibold text-sageDark">Riya S.</div>
-          <div class="text-xs text-sageDark/60">Mom of 2, Bangalore</div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20">
-      <div class="flex text-amber-500 gap-0.5"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-      <p class="mt-3 text-sageDark/80 text-sm leading-relaxed">"The medication reminders alone are worth it. My dad hasn't missed a dose in months and I can check in from another city."</p>
-      <div class="mt-5 flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-sageDeep grid place-items-center font-bold text-white">A</div>
-        <div>
-          <div class="text-sm font-semibold text-sageDark">Arjun M.</div>
-          <div class="text-xs text-sageDark/60">Caregiver, Pune</div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-sage/20">
-      <div class="flex text-amber-500 gap-0.5"><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg><svg class="w-4 h-4"><use href="#i-star"/></svg></div>
-      <p class="mt-3 text-sageDark/80 text-sm leading-relaxed">"Feels warm and simple. Not another cold health app — this actually understands families."</p>
-      <div class="mt-5 flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-sageDeep grid place-items-center font-bold text-white">P</div>
-        <div>
-          <div class="text-sm font-semibold text-sageDark">Priya K.</div>
-          <div class="text-xs text-sageDark/60">Grandmother, Delhi</div>
-        </div>
-      </div>
-    </div>
+  <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <a href="guides/prescription-tracker.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">Best prescription tracker for families</h3>
+      <p class="mt-2 text-sm text-textSecondary">How to stop losing prescriptions and track every dose for everyone in your house.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a href="guides/family-medical-records.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">How to organize family medical records</h3>
+      <p class="mt-2 text-sm text-textSecondary">A system for keeping every family member's health history in one place.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a href="guides/medical-document-scanner.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">Best medical document scanner apps</h3>
+      <p class="mt-2 text-sm text-textSecondary">Turn a phone camera into a filing system for prescriptions and reports.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a href="guides/family-health-app.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">Choosing a family health app</h3>
+      <p class="mt-2 text-sm text-textSecondary">What to look for in an app that manages health for more than one person.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a href="guides/insurance-card-wallet.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">Digital insurance card wallet, explained</h3>
+      <p class="mt-2 text-sm text-textSecondary">How to keep every family member's insurance ID on your phone, not in a drawer.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a href="guides/emergency-medical-info.html" class="group bg-white rounded-2xl p-6 ring-1 ring-border shadow-sm hover:shadow-md transition">
+      <h3 class="font-semibold text-ink group-hover:text-primary transition">Storing emergency medical info for your family</h3>
+      <p class="mt-2 text-sm text-textSecondary">Blood group, allergies, and contacts — accessible in one tap, even offline.</p>
+      <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">Read the guide <svg class="w-4 h-4"><use href="#i-arrow"/></svg></span>
+    </a>
+  </div>
+  <div class="mt-8 text-center">
+    <a href="guides/index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-inkDeep transition">See all guides <svg class="w-4 h-4"><use href="#i-arrow"/></svg></a>
   </div>
 </section>
 
@@ -323,29 +456,41 @@
 <section id="faq" class="bg-white py-20">
   <div class="max-w-3xl mx-auto px-5">
     <div class="text-center">
-      <p class="text-sm font-semibold uppercase tracking-wider text-sageDeep">FAQ</p>
-      <h2 class="mt-2 text-3xl md:text-4xl font-bold text-sageDark">Questions, gently answered</h2>
+      <p class="text-sm font-semibold uppercase tracking-wider text-primary">FAQ</p>
+      <h2 class="mt-2 text-3xl md:text-4xl font-display font-semibold text-ink">Questions, gently answered</h2>
     </div>
     <div class="mt-10 space-y-3">
-      <details class="group bg-sageTint rounded-2xl p-5 ring-1 ring-sage/30">
-        <summary class="flex justify-between items-center cursor-pointer font-semibold text-sageDark">How secure is my family's data?<span class="chev">▾</span></summary>
-        <p class="mt-3 text-sm text-sageDark/70">All documents are encrypted end-to-end with AES-256. Only you and the family members you invite have access — not even MediNest can read your files.</p>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">What is MediNest and who is it for?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">MediNest is a family medical records app that lets you scan, store, and organize prescriptions, insurance cards, lab reports, and vaccination records for every member of your family in one vault. It's built for parents, caregivers, and anyone managing health paperwork for more than one person. <a href="guides/family-medical-records.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
       </details>
-      <details class="group bg-sageTint rounded-2xl p-5 ring-1 ring-sage/30">
-        <summary class="flex justify-between items-center cursor-pointer font-semibold text-sageDark">What file types can I upload?<span class="chev">▾</span></summary>
-        <p class="mt-3 text-sm text-sageDark/70">PDFs, JPGs, PNGs, HEIC photos, and common document formats (DOCX, TXT). You can also snap photos directly in the app.</p>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Is my family's data secure in MediNest?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">MediNest stores your documents and health data on your device, protected by your device's built-in security. Nothing is sold or shared without your say-so. <a href="privacy.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
       </details>
-      <details class="group bg-sageTint rounded-2xl p-5 ring-1 ring-sage/30">
-        <summary class="flex justify-between items-center cursor-pointer font-semibold text-sageDark">How many family members can I add?<span class="chev">▾</span></summary>
-        <p class="mt-3 text-sm text-sageDark/70">The free plan supports up to 4 members. MediNest Plus supports unlimited family members and shared caregiver access.</p>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Can MediNest scan and organize prescriptions automatically?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">Yes — MediNest's medical document scanner files any prescription, insurance card, or document under the right family member and category automatically. <a href="guides/medical-document-scanner.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
       </details>
-      <details class="group bg-sageTint rounded-2xl p-5 ring-1 ring-sage/30">
-        <summary class="flex justify-between items-center cursor-pointer font-semibold text-sageDark">Is MediNest free?<span class="chev">▾</span></summary>
-        <p class="mt-3 text-sm text-sageDark/70">Yes — the core app is free forever. MediNest Plus (unlimited members, extra storage, family sharing) starts at $4.99/month.</p>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">How many family members can I add?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">Add every member of your household — kids, yourself, a partner, or aging parents — and switch between their records, medications, and documents in a tap. <a href="guides/family-caregiver-app.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
       </details>
-      <details class="group bg-sageTint rounded-2xl p-5 ring-1 ring-sage/30">
-        <summary class="flex justify-between items-center cursor-pointer font-semibold text-sageDark">Can I share records with my doctor?<span class="chev">▾</span></summary>
-        <p class="mt-3 text-sm text-sageDark/70">Yes — generate a temporary secure link for any doctor or specialist. Links expire automatically for privacy.</p>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Does MediNest track medication reminders?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">Yes — MediNest's medication tracker sends dosage, schedule, and refill reminders for every prescription, for every family member. <a href="guides/medication-tracker.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
+      </details>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Can I access emergency medical info quickly?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">MediNest generates a shareable emergency card per family member with blood group, allergies, and contacts — viewable by QR code, even offline. <a href="guides/emergency-medical-info.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
+      </details>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Can I store insurance cards in MediNest?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">Yes — MediNest keeps a digital insurance card wallet organized by family member, so every policy and ID is on your phone. <a href="guides/insurance-card-wallet.html" class="text-primary font-semibold hover:underline">Learn more →</a></p>
+      </details>
+      <details class="group bg-background rounded-2xl p-5 ring-1 ring-border">
+        <summary class="flex justify-between items-center cursor-pointer font-semibold text-ink">Is MediNest free?<span class="chev">▾</span></summary>
+        <p class="mt-3 text-sm text-textSecondary">Yes — MediNest is free to start with no credit card required. MediNest Plus, with unlimited family members and extra storage, comes with a 7-day free trial. <a href="#download" class="text-primary font-semibold hover:underline">Get started →</a></p>
       </details>
     </div>
   </div>
@@ -353,66 +498,64 @@
 
 <!-- Final CTA -->
 <section id="download" class="max-w-6xl mx-auto px-5 py-20">
-  <div class="bg-sageDeep rounded-3xl p-10 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
-    <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-sage/40 blur-2xl"></div>
-    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-sageDark/50 blur-2xl"></div>
+  <div class="bg-inkDeep rounded-3xl p-10 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
+    <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-moss/30 blur-2xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full bg-primary/50 blur-2xl"></div>
     <div class="relative">
-      <h2 class="text-3xl md:text-4xl font-bold">Start Organizing Your Family's Health Today</h2>
-      <p class="mt-4 text-white/85 max-w-xl mx-auto">Join 20,000+ families keeping medical records calm, safe, and always within reach.</p>
+      <h2 class="text-3xl md:text-4xl font-display font-semibold">Get Your Family's Health Paperwork Out of the Drawer</h2>
+      <p class="mt-4 text-white/85 max-w-xl mx-auto">MediNest is launching soon. Be the first to know when the app store links go live — start free with a 7-day trial.</p>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
-        <a href="#" class="flex items-center gap-2 bg-white text-sageDark px-5 py-3 rounded-2xl font-semibold hover:bg-sageLight transition">
-          <svg class="w-5 h-5"><use href="#i-apple"/></svg> App Store
-        </a>
-        <a href="#" class="flex items-center gap-2 bg-white text-sageDark px-5 py-3 rounded-2xl font-semibold hover:bg-sageLight transition">
-          <svg class="w-5 h-5"><use href="#i-play"/></svg> Google Play
+        <a href="mailto:sahadeep125@gmail.com?subject=Notify%20me%20when%20MediNest%20launches" class="flex items-center gap-2 bg-white text-ink px-5 py-3 rounded-2xl font-semibold hover:bg-mint transition">
+          Get Notified at Launch
         </a>
       </div>
       <p class="mt-6 text-xs text-white/70">Free forever plan • No credit card required</p>
     </div>
   </div>
 </section>
+</main>
 
 <!-- Footer -->
-<footer class="bg-white border-t border-sage/30">
+<footer class="bg-white border-t border-border">
   <div class="max-w-6xl mx-auto px-5 py-12 grid md:grid-cols-4 gap-8">
     <div class="md:col-span-2">
-      <div class="flex items-center gap-2 font-bold text-xl text-sageDark">
-        <span class="grid place-items-center w-10 h-10 rounded-2xl bg-sageDeep text-white"><svg class="w-5 h-5"><use href="#i-logo"/></svg></span>
+      <div class="flex items-center gap-2.5 font-display font-semibold text-xl text-ink">
+        <img src="assets/logo.png" alt="MediNest logo" width="36" height="36" class="w-9 h-9 rounded-xl" />
         MediNest
       </div>
-      <p class="mt-4 text-sm text-sageDark/70 max-w-sm">The gentle family health vault. Documents, prescriptions, and reminders — all in one nest.</p>
-      <div class="mt-5 flex gap-3">
-        <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-sageLight text-sageDeep grid place-items-center hover:bg-sage hover:text-white transition"><svg class="w-4 h-4"><use href="#i-twitter"/></svg></a>
-        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-sageLight text-sageDeep grid place-items-center hover:bg-sage hover:text-white transition"><svg class="w-4 h-4"><use href="#i-instagram"/></svg></a>
-        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-sageLight text-sageDeep grid place-items-center hover:bg-sage hover:text-white transition"><svg class="w-4 h-4"><use href="#i-facebook"/></svg></a>
-      </div>
+      <p class="mt-4 text-sm text-textSecondary max-w-sm">The family medical records app. Prescriptions, insurance cards, and reminders — all in one vault.</p>
     </div>
     <div>
-      <h4 class="font-semibold text-sageDark">Product</h4>
-      <ul class="mt-3 space-y-2 text-sm text-sageDark/70">
-        <li><a href="#features" class="hover:text-sageDeep">Features</a></li>
-        <li><a href="#how" class="hover:text-sageDeep">How it works</a></li>
-        <li><a href="#faq" class="hover:text-sageDeep">FAQ</a></li>
+      <h4 class="font-semibold text-ink">Product</h4>
+      <ul class="mt-3 space-y-2 text-sm text-textSecondary">
+        <li><a href="#features" class="hover:text-primary">Features</a></li>
+        <li><a href="#how" class="hover:text-primary">How it works</a></li>
+        <li><a href="guides/index.html" class="hover:text-primary">Guides</a></li>
+        <li><a href="#faq" class="hover:text-primary">FAQ</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold text-sageDark">Company</h4>
-      <ul class="mt-3 space-y-2 text-sm text-sageDark/70">
-        <li><a href="privacy.html" class="hover:text-sageDeep">Privacy</a></li>
-        <li><a href="terms.html" class="hover:text-sageDeep">Terms</a></li>
-        <li><a href="#" class="hover:text-sageDeep">Contact</a></li>
+      <h4 class="font-semibold text-ink">Company</h4>
+      <ul class="mt-3 space-y-2 text-sm text-textSecondary">
+        <li><a href="privacy.html" class="hover:text-primary">Privacy</a></li>
+        <li><a href="terms.html" class="hover:text-primary">Terms</a></li>
+        <li><a href="support.html" class="hover:text-primary">Support</a></li>
+        <li><a href="mailto:sahadeep125@gmail.com" class="hover:text-primary">Contact</a></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-sage/30">
-    <div class="max-w-6xl mx-auto px-5 py-6 text-center text-xs text-sageDark/60">© 2026 MediNest. Made with care for families everywhere.</div>
+  <div class="border-t border-border">
+    <div class="max-w-6xl mx-auto px-5 py-6 text-center text-xs text-textSecondary">© 2026 MediNest. Made with care for families everywhere.</div>
   </div>
 </footer>
 
 <script>
   const btn = document.getElementById('menuBtn');
   const menu = document.getElementById('mobileMenu');
-  btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  btn?.addEventListener('click', () => {
+    const open = menu.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!open));
+  });
   menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 </script>
 </body>

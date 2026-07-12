@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How a Medication Tracker Keeps Doses on Schedule | MediNest</title>
+<meta name="description" content="Dosage, frequency, and refill reminders for everyone in the household. Here's how a medication tracker actually prevents missed doses." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://medinest.dsahathemes.in/guides/medication-tracker.html" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How a Medication Tracker Keeps Doses on Schedule | MediNest" />
+<meta property="og:description" content="Dosage, frequency, and refill reminders for everyone in the household." />
+<meta property="og:url" content="https://medinest.dsahathemes.in/guides/medication-tracker.html" />
+<meta property="og:image" content="https://medinest.dsahathemes.in/assets/medinest-3.jpg" />
+<link rel="icon" href="../assets/logo.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script>
+  tailwind.config = { theme: { extend: {
+    colors: { ink:'#051F20', inkDeep:'#0B2B26', hero:'#163832', primary:'#235347', primaryLight:'#E4F0EA', moss:'#8EB69B', background:'#F5FBF6', mint:'#DAF1DE', accent:'#D9A441', text:'#12211D', textSecondary:'#5B6E67', border:'#DCE9E1', success:'#5E9C7C' },
+    fontFamily: { display:['Fraunces','serif'], body:['Plus Jakarta Sans','sans-serif'] },
+  }}};
+</script>
+<style>
+  body { font-family:'Plus Jakarta Sans',sans-serif; background:#F5FBF6; color:#12211D; }
+  .font-display { font-family:'Fraunces',serif; }
+  .glass-nav { background:rgba(245,251,246,0.8); backdrop-filter:blur(16px); border-bottom:1px solid rgba(220,233,225,0.6); }
+</style>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "Article", "headline": "How a Medication Tracker Keeps Doses on Schedule", "description": "Dosage, frequency, and refill reminders for everyone in the household.", "author": { "@type": "Person", "name": "Deep Saha" }, "publisher": { "@type": "Organization", "name": "MediNest", "logo": { "@type": "ImageObject", "url": "https://medinest.dsahathemes.in/assets/logo.png" } }, "mainEntityOfPage": "https://medinest.dsahathemes.in/guides/medication-tracker.html", "image": "https://medinest.dsahathemes.in/assets/medinest-3.jpg" }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  { "@type": "Question", "name": "How does a medication tracker know when to remind me?", "acceptedAnswer": { "@type": "Answer", "text": "You set the frequency (daily, specific days) and time for each medication once. MediNest then reminds you automatically for every dose, and separately when a refill is due, based on how much is left." } },
+  { "@type": "Question", "name": "Can a medication tracker handle different schedules for different family members?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. In MediNest, each family member's medications and schedules are tracked independently, so a child's twice-daily antibiotic and a parent's weekday-only prescription don't get mixed up." } }
+] }
+</script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  { "@type": "ListItem", "position": 1, "name": "MediNest", "item": "https://medinest.dsahathemes.in/" },
+  { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://medinest.dsahathemes.in/guides/index.html" },
+  { "@type": "ListItem", "position": 3, "name": "Medication Tracker", "item": "https://medinest.dsahathemes.in/guides/medication-tracker.html" }
+] }
+</script>
+</head>
+<body class="antialiased">
+<header class="sticky top-0 z-50 glass-nav">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-3.5">
+    <a href="../index.html" class="flex items-center gap-2.5 font-display font-semibold text-xl text-ink">
+      <img src="../assets/logo.png" alt="MediNest logo" width="36" height="36" class="w-9 h-9 rounded-xl" /> MediNest
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-text">
+      <a href="../index.html#features" class="hover:text-primary transition">Features</a>
+      <a href="index.html" class="hover:text-primary transition">Guides</a>
+      <a href="../index.html#faq" class="hover:text-primary transition">FAQ</a>
+    </div>
+    <a href="../index.html#download" class="bg-primary hover:bg-inkDeep text-white text-sm font-semibold px-4 py-2.5 rounded-2xl shadow-sm transition">Get Notified</a>
+  </nav>
+</header>
+
+<main class="max-w-3xl mx-auto px-5 py-14">
+  <nav aria-label="Breadcrumb" class="text-sm text-textSecondary mb-6"><a href="../index.html" class="hover:text-primary">Home</a> / <a href="index.html" class="hover:text-primary">Guides</a> / <span class="text-ink font-medium">Medication Tracker</span></nav>
+
+  <p class="text-sm font-semibold uppercase tracking-wider text-primary">Prescriptions &amp; Medications</p>
+  <h1 class="mt-2 text-3xl sm:text-4xl font-display font-semibold text-ink leading-tight">How a Medication Tracker Keeps Doses on Schedule</h1>
+  <p class="mt-5 text-lg text-textSecondary leading-relaxed">A medication tracker's whole job is to remove "did I take that?" from your day. MediNest's medication tracker logs dosage, frequency, and which days a medicine is due — then reminds you at the right time, for the right person, without you having to remember anything yourself.</p>
+
+  <img src="../assets/medinest-3.jpg" width="320" height="695" loading="lazy" class="mt-8 w-full max-w-xs mx-auto rounded-[2rem] shadow-lg ring-1 ring-black/5" alt="MediNest medication screen showing Metformin 500mg with specific days selected and reminders enabled" />
+
+  <h2 class="mt-12 text-2xl font-display font-semibold text-ink">What a medication tracker should actually track</h2>
+  <ul class="mt-4 space-y-3 text-textSecondary">
+    <li class="flex gap-3"><span class="text-primary font-semibold">•</span><span><strong class="text-ink">Dosage and frequency.</strong> How much, how often, and on which specific days.</span></li>
+    <li class="flex gap-3"><span class="text-primary font-semibold">•</span><span><strong class="text-ink">Who prescribed it.</strong> The doctor's name attached, for quick reference at refill time.</span></li>
+    <li class="flex gap-3"><span class="text-primary font-semibold">•</span><span><strong class="text-ink">Adherence history.</strong> A record of which doses were actually taken on schedule.</span></li>
+    <li class="flex gap-3"><span class="text-primary font-semibold">•</span><span><strong class="text-ink">Per-person tracking.</strong> Every family member's medications tracked separately, not merged into one list.</span></li>
+  </ul>
+
+  <h2 class="mt-10 text-2xl font-display font-semibold text-ink">Setting up a medication in MediNest</h2>
+  <ol class="mt-4 space-y-3 text-textSecondary list-decimal pl-5">
+    <li>Open the family member's profile and go to Medications.</li>
+    <li>Add the medication name, dosage, and prescribing doctor.</li>
+    <li>Choose the frequency — daily or specific days of the week.</li>
+    <li>Turn on reminders to get notified at dose time.</li>
+  </ol>
+
+  <h2 class="mt-10 text-2xl font-display font-semibold text-ink">Frequently asked questions</h2>
+  <div class="mt-4 space-y-3">
+    <details class="group bg-white rounded-2xl p-5 ring-1 ring-border">
+      <summary class="cursor-pointer font-semibold text-ink">How does a medication tracker know when to remind me?</summary>
+      <p class="mt-3 text-sm text-textSecondary">You set the frequency (daily, specific days) and time for each medication once. MediNest then reminds you automatically for every dose, and separately when a refill is due, based on how much is left.</p>
+    </details>
+    <details class="group bg-white rounded-2xl p-5 ring-1 ring-border">
+      <summary class="cursor-pointer font-semibold text-ink">Can a medication tracker handle different schedules for different family members?</summary>
+      <p class="mt-3 text-sm text-textSecondary">Yes. In MediNest, each family member's medications and schedules are tracked independently, so a child's twice-daily antibiotic and a parent's weekday-only prescription don't get mixed up.</p>
+    </details>
+  </div>
+
+  <div class="mt-12 bg-inkDeep rounded-3xl p-8 text-center text-white">
+    <h2 class="text-2xl font-display font-semibold">Never miss a dose again</h2>
+    <p class="mt-2 text-white/80 text-sm">Free to start. No credit card required.</p>
+    <a href="../index.html#download" class="mt-5 inline-block bg-white text-ink px-5 py-3 rounded-2xl font-semibold hover:bg-mint transition">Get Notified at Launch</a>
+  </div>
+
+  <div class="mt-12">
+    <h2 class="text-lg font-display font-semibold text-ink">Related guides</h2>
+    <div class="mt-4 grid sm:grid-cols-2 gap-4">
+      <a href="prescription-tracker.html" class="text-primary font-semibold hover:underline">Best prescription tracker for families →</a>
+      <a href="elderly-parent-care.html" class="text-primary font-semibold hover:underline">Managing an aging parent's medical info remotely →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-white border-t border-border mt-8">
+  <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2.5 font-display font-semibold text-lg text-ink"><img src="../assets/logo.png" alt="MediNest logo" width="28" height="28" class="w-7 h-7 rounded-lg" /> MediNest</div>
+    <div class="flex items-center gap-6 text-sm text-textSecondary">
+      <a href="../privacy.html" class="hover:text-primary">Privacy</a>
+      <a href="../terms.html" class="hover:text-primary">Terms</a>
+      <a href="../support.html" class="hover:text-primary">Support</a>
+    </div>
+    <p class="text-xs text-textSecondary">© 2026 MediNest</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,92 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Privacy Policy — MediNest</title>
-<meta name="description" content="MediNest Privacy Policy — how we collect, protect, and share information about you and your family." />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = { theme: { extend: { colors: {
-    sage:'#6FA582', sageDeep:'#4E8367', sageDark:'#2F4A3B', sageLight:'#E4EFE7', sageTint:'#F4F9F5'
-  }}}};
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — MediNest</title>
+  <meta name="description" content="MediNest Privacy Policy. Learn how we protect your family's medical records, prescriptions, and insurance cards with an on-device, privacy-first approach." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://medinest.dsahathemes.in/privacy.html" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { sand:'#F5FBF6', sandDark:'#DAF1DE', charcoal:'#12211D', charcoalLight:'#5B6E67', vitality:'#235347', vitalityLight:'#E4F0EA', sage:'#DAF1DE', sageDark:'#235347' },
+        fontFamily: { display:['Fraunces','serif'], body:['Plus Jakarta Sans','sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    html { overflow-x: hidden; }
+    body { font-family:'Plus Jakarta Sans',sans-serif; background:#F5FBF6; color:#12211D; overflow-x: hidden; }
+    .glass-nav { background:rgba(245,251,246,0.75); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid rgba(220,233,225,0.6); }
+  </style>
 </head>
-<body class="bg-sageTint text-sageDark font-sans antialiased">
-
-<header class="sticky top-0 z-50 bg-sageTint/85 backdrop-blur border-b border-sage/40">
-  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
-    <a href="medinest.html" class="flex items-center gap-2 font-bold text-xl text-sageDark">
-      <span class="grid place-items-center w-10 h-10 rounded-2xl bg-sageDeep text-white shadow-sm">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><path d="M12 9v6M9 12h6"/></svg>
-      </span>
-      MediNest
-    </a>
-    <a href="medinest.html" class="text-sm font-semibold text-sageDeep hover:text-sageDark">← Back to home</a>
+<body>
+  <nav class="glass-nav fixed top-0 left-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between flex-wrap gap-2">
+      <a href="index.html" class="flex items-center gap-2 sm:gap-3"><img src="assets/logo.png" alt="MediNest" width="40" height="40" class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl" /><span class="font-display text-lg sm:text-xl text-charcoal">MediNest</span></a>
+      <div class="flex items-center gap-3 sm:gap-6 text-xs sm:text-sm"><a href="index.html" class="text-charcoalLight hover:text-vitality transition">Home</a><a href="terms.html" class="text-charcoalLight hover:text-vitality transition">Terms</a><a href="support.html" class="text-charcoalLight hover:text-vitality transition">Support</a></div>
+    </div>
   </nav>
-</header>
 
-<main class="max-w-3xl mx-auto px-5 py-14 md:py-20">
-  <p class="text-sm font-semibold uppercase tracking-wider text-sageDeep">Legal</p>
-  <h1 class="mt-2 text-4xl md:text-5xl font-bold text-sageDark tracking-tight">Privacy Policy</h1>
-  <p class="mt-3 text-sm text-sageDark/60">Last updated: July 8, 2026</p>
+  <main class="pt-32 pb-24 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div>
+        <div class="inline-block bg-sage/60 text-sageDark text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Legal</div>
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl text-charcoal mb-6">Privacy Policy</h1>
+        <p class="text-charcoalLight mb-8">Effective as of 2026-01-12</p>
 
-  <div class="mt-10 bg-white rounded-2xl ring-1 ring-sage/30 shadow-sm p-6 md:p-10 space-y-8 leading-relaxed text-sageDark/85">
+        <div class="prose max-w-none text-charcoalLight leading-relaxed space-y-6 break-words">
 
-    <p>Your family's health information is deeply personal. This Privacy Policy explains what MediNest ("we", "us") collects, how we protect it, and the choices you have. By using MediNest, you agree to the practices described below.</p>
+          <p>This privacy policy applies to the MediNest app (hereby referred to as "Application") for mobile devices that was created by Deep Saha (hereby referred to as "Service Provider") as a freemium service with an optional MediNest Plus subscription. This service is intended for use "AS IS".</p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">1. Information We Collect</h2>
-      <ul class="mt-3 list-disc pl-5 space-y-2 text-sm">
-        <li><strong>Account information:</strong> name, email, phone number, and password (hashed).</li>
-        <li><strong>Family & health data:</strong> profiles, medical documents, prescriptions, medication schedules, and reminders you choose to add.</li>
-        <li><strong>Device data:</strong> device type, OS version, crash logs, and basic usage analytics.</li>
-      </ul>
-    </section>
+          <!-- Privacy-First Highlight -->
+          <div class="bg-sage/40 border border-sageDark/20 rounded-2xl p-6 my-8">
+            <h2 class="font-display text-2xl text-charcoal mt-0 mb-3 flex items-center gap-3"><svg class="w-7 h-7 text-sageDark flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg> Privacy-First, On-Device Architecture</h2>
+            <p class="mb-0">MediNest is built with your family's privacy at its core. <strong>Your family's medical records — including prescriptions, insurance cards, lab reports, vaccination history, emergency medical info, and medication schedules — are processed and stored entirely on your device.</strong> This data never leaves your device, is not transmitted to external servers, and is not shared with any third parties. We do not sell, rent, or share your personal health data for advertising or data brokering purposes.</p>
+          </div>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">2. How We Use Your Information</h2>
-      <p class="mt-3 text-sm">We use your data only to provide MediNest features: syncing across devices, sending reminders, generating doctor-visit summaries, and improving reliability. We do <strong>not</strong> sell your personal or health data.</p>
-    </section>
+          <h2 class="font-display text-2xl text-charcoal mt-8">1. Information Collection and Use</h2>
+          <p>The Application collects minimal information when you download and use it. Because MediNest uses an <strong>on-device architecture</strong>, the vast majority of your family's data never leaves your phone.</p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">3. Encryption & Security</h2>
-      <p class="mt-3 text-sm">All medical documents are encrypted end-to-end using AES-256. Only you and the family members you invite hold the decryption keys. MediNest staff cannot read your files.</p>
-    </section>
+          <h3 class="font-display text-xl text-charcoal mt-6">Data Stored On Your Device Only (Never Collected)</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Family member profiles (name, age, sex, vitals, blood group)</li>
+            <li>Scanned prescriptions, lab reports, body scans, and receipts</li>
+            <li>Insurance cards and policy details</li>
+            <li>Vaccination records, allergies, and chronic condition history</li>
+            <li>Medication schedules, dosage, and adherence logs</li>
+            <li>Emergency medical information and emergency contacts</li>
+          </ul>
+          <p><strong>This health data is never transmitted, collected, or accessible by the Service Provider or any third party.</strong></p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">4. Sharing & Third Parties</h2>
-      <p class="mt-3 text-sm">We share data only when you explicitly generate a share link (e.g. to a doctor), or when required by law. Links you share can be revoked at any time, and expire automatically.</p>
-    </section>
+          <h3 class="font-display text-xl text-charcoal mt-6">Limited Data Collected by Third-Party Services</h3>
+          <p>MediNest may use standard third-party services to operate the app, such as anonymized product analytics (to understand which features are used, not to identify you personally) and app store billing providers (Apple App Store or Google Play Store) to process MediNest Plus subscriptions. These services may collect anonymized device information, screen view events, and purchase status — never the health documents or family records described above.</p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">5. Your Choices</h2>
-      <ul class="mt-3 list-disc pl-5 space-y-2 text-sm">
-        <li>Export or delete any family member's data at any time.</li>
-        <li>Delete your account permanently from Settings → Account.</li>
-        <li>Opt out of anonymous usage analytics in Settings → Privacy.</li>
-      </ul>
-    </section>
+          <h3 class="font-display text-xl text-charcoal mt-6">Data the Application Does NOT Collect</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Your device's precise IP address for tracking purposes</li>
+            <li>Precise location data</li>
+            <li>The content of your scanned medical documents</li>
+            <li>Operating system details beyond basic device type</li>
+          </ul>
+          <p>The Application does <strong>not</strong> gather precise information about the location of your mobile device. No geolocation services are used.</p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">6. Children's Privacy</h2>
-      <p class="mt-3 text-sm">Children's records are added and managed by a parent or guardian's account. We do not knowingly allow independent accounts for users under 13.</p>
-    </section>
+          <h3 class="font-display text-xl text-charcoal mt-6">Account Data (Optional)</h3>
+          <p>If you create an account, the Service Provider may collect your email address for authentication and MediNest Plus subscription management purposes. For a better experience, the Service Provider may request certain personally identifiable information, including but not limited to email and display name. This information is retained and used as described in this privacy policy.</p>
 
-    <section>
-      <h2 class="text-xl font-bold text-sageDark">7. Contact Us</h2>
-      <p class="mt-3 text-sm">Questions or requests about your data? Email <a class="text-sageDeep font-semibold hover:underline" href="mailto:privacy@medinest.app">privacy@medinest.app</a>. We respond within 5 business days.</p>
-    </section>
+          <h2 class="font-display text-2xl text-charcoal mt-8">2. Third-Party Services</h2>
+          <p>The Application uses standard third-party services for billing and anonymized analytics, each with their own privacy practices. <strong>No family medical records or health data are shared with any of these services.</strong> Subscriptions are processed through the Apple App Store or Google Play Store, subject to their respective privacy policies.</p>
 
-  </div>
+          <p>The Service Provider may disclose limited, non-health information:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>As required by law, such as to comply with a subpoena or similar legal process</li>
+            <li>When they believe in good faith that disclosure is necessary to protect their rights, your safety, or the safety of others, investigate fraud, or respond to a government request</li>
+            <li>With trusted service providers who work on their behalf, do not have independent use of the disclosed information, and have agreed to adhere to this privacy policy</li>
+          </ul>
 
-  <div class="mt-10 text-center">
-    <a href="medinest.html" class="inline-flex bg-sageDeep hover:bg-sageDark text-white font-semibold px-6 py-3 rounded-2xl shadow-sm transition">Back to MediNest</a>
-  </div>
-</main>
+          <h2 class="font-display text-2xl text-charcoal mt-8">3. Data Retention and Deletion</h2>
+          <p><strong>On-device health data</strong> — including every family member's profile, documents, and medication records — remains entirely on your device. You can delete any family member's records, or all data, at any time from within the app. When you delete data or uninstall the app, this data is permanently removed from your device.</p>
+          <p><strong>Account data</strong> (if applicable) will be retained for as long as you use the Application and for a reasonable time thereafter (typically up to 30 days after account deletion for backup and legal compliance purposes). Automatically collected analytics data may be retained by third-party services according to their respective retention policies.</p>
+          <p>Upon your request for deletion, we will remove or anonymize your account data from our systems within 30 days.</p>
 
-<footer class="bg-white border-t border-sage/30 mt-10">
-  <div class="max-w-6xl mx-auto px-5 py-6 text-center text-xs text-sageDark/60">© 2026 MediNest. Made with care for families everywhere.</div>
-</footer>
+          <h2 class="font-display text-2xl text-charcoal mt-8">4. How to Request Data Deletion</h2>
+          <p>Because your family's medical records live on your device, deleting a family member's profile or your entire vault from within the app is immediate and permanent. To delete account-level data (email, subscription status), you have two options:</p>
+
+          <h3 class="font-display text-xl text-charcoal mt-6">Option 1: In-App Account Deletion</h3>
+          <ol class="list-decimal pl-6 space-y-2">
+            <li>Open the MediNest application on your phone</li>
+            <li>Tap on <strong>Settings</strong> in the bottom navigation bar</li>
+            <li>Scroll to the bottom of the Settings screen</li>
+            <li>Tap on <strong>Delete Your Account</strong> to proceed</li>
+          </ol>
+
+          <h3 class="font-display text-xl text-charcoal mt-6">Option 2: Request by Email</h3>
+          <p>If you need assistance with the deletion process or have any questions, contact us at <a href="mailto:sahadeep125@gmail.com" class="text-vitality hover:underline">sahadeep125@gmail.com</a>. We will respond within a reasonable timeframe (typically within 30 days).</p>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">5. Revoking Consent &amp; Your Rights</h2>
+          <p>You can revoke your consent and stop all collection of information by the Application by:</p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Using the in-app "Delete Your Account" option in Settings</li>
+            <li>Deleting individual family member profiles or documents from within the app at any time</li>
+            <li>Uninstalling the Application using the standard uninstall processes available on your mobile device or via the app store</li>
+          </ul>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">6. Regulatory Compliance</h2>
+          <p>The Service Provider is committed to complying with applicable data protection laws:</p>
+          <ul class="list-disc pl-6 space-y-3">
+            <li><strong>GDPR (EU/EEA):</strong> Users in the European Union have the right to access, rectify, erase, restrict processing, data portability, and object to processing. You may exercise these rights by contacting us or using the deletion options above.</li>
+            <li><strong>CCPA (California):</strong> California residents have the right to know what data we collect, request deletion, opt-out of sale (we do not sell personal information), and non-discrimination for exercising these rights.</li>
+            <li><strong>HIPAA:</strong> MediNest is a consumer health-organization tool created and controlled by you, not a covered entity or business associate under HIPAA. Records you store are for your own personal use in managing your family's health information.</li>
+            <li><strong>COPPA:</strong> The Application allows a parent or guardian to create and manage medical record profiles on behalf of their children; MediNest does not knowingly collect personal information directly from children under 13.</li>
+          </ul>
+          <p>To exercise your rights under these regulations, contact us at <a href="mailto:sahadeep125@gmail.com" class="text-vitality hover:underline">sahadeep125@gmail.com</a>.</p>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">7. Children's Privacy</h2>
+          <p>MediNest is designed to let parents and guardians manage medical records for their children as part of a family vault. The Service Provider does not knowingly solicit personal information directly from children under 13, and the Application is not directed at children for independent use. Any information about a child stored in MediNest is entered and controlled by the parent or guardian's device. If you are a parent or guardian with questions about your child's data, please contact the Service Provider at <a href="mailto:sahadeep125@gmail.com" class="text-vitality hover:underline">sahadeep125@gmail.com</a>.</p>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">8. Security</h2>
+          <p>The Service Provider is concerned about safeguarding the confidentiality of your family's information. Your on-device health data benefits from your device's built-in security features, including device encryption and biometric or passcode protection where enabled. Because records never leave your device, they are not exposed to the risks of a centralized server breach.</p>
+
+          <!-- Medical Disclaimer -->
+          <div class="bg-vitalityLight/60 border border-vitality/20 rounded-2xl p-6 my-8">
+            <h2 class="font-display text-2xl text-charcoal mt-0 mb-3 flex items-center gap-3"><svg class="w-7 h-7 text-vitality flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg> Health Data Disclaimer</h2>
+            <p class="mb-0">MediNest is a record-keeping and organization tool — not a medical device, and not a substitute for professional medical advice. The documents, reminders, and summaries you store and generate are for personal record-keeping only. <strong>Always consult a physician or qualified healthcare provider for medical advice, diagnosis, or treatment decisions.</strong></p>
+          </div>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">9. Changes to This Privacy Policy</h2>
+          <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">10. Your Consent</h2>
+          <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+
+          <h2 class="font-display text-2xl text-charcoal mt-8">11. Contact Us</h2>
+          <p>If you have any questions regarding privacy while using the Application, or have questions about our practices, please contact the Service Provider via email at <a href="mailto:sahadeep125@gmail.com" class="text-vitality hover:underline">sahadeep125@gmail.com</a> or visit our <a href="support.html" class="text-vitality hover:underline">Support page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-8 px-6 border-t border-gray-200/50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3"><img src="assets/logo.png" alt="MediNest" width="28" height="28" class="rounded-lg" /><span class="font-display text-charcoal">MediNest</span></div>
+      <div class="flex items-center gap-6 text-sm text-charcoalLight"><a href="privacy.html" class="hover:text-vitality transition">Privacy</a><a href="terms.html" class="hover:text-vitality transition">Terms</a><a href="support.html" class="hover:text-vitality transition">Support</a></div>
+      <p class="text-xs text-gray-400">© 2026 MediNest</p>
+    </div>
+  </footer>
 </body>
 </html>
